@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/png">
     <title>MHM Projet</title>
     <link rel="stylesheet" href="api.css">
     <script src="apiRecettes.js" defer></script>
@@ -10,9 +11,27 @@
     <script src="apiCitations.js" defer></script>
 </head>
 <body>
+
     <div id="citations"></div>
 <div>
-    <div id="films"></div>
+    <div id="films">
+        
+            <nav>
+                <div class="search">
+                    <input type="text" id="movie-name" 
+                    placeholder="Entrez le nom du film"
+                    value="Black Panther">
+                    <button id="search-btn">Rechercher</button>
+    
+                </div>
+                <!-- <div class="logo">
+                <img src="img/logo cinema.jpg" alt="logo">
+            </div> -->
+            </nav>
+        
+    
+        <section id="result"></section>
+    </div>
     <div id="recettes">
         <ul id="listSpecification"></ul>
         <div id="image"></div>

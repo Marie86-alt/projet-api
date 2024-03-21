@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=GFS+Didot&display=swap');
+:root {
+ --alkatra: "Alkatra", sans-serif;
+
+ --bgColor: black;
+ --textColor: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--alkatra);
+}
+
+body {
+    height: 100vh;
+    background-color: wheat;
+}
+
+/* style pour la nav*/
+
+nav {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+nav .search {
+    display: flex;
+    gap: 10px;
+}
+
+nav .input,
+nav .button {
+    padding: 5px 15px;
+    font-size: 0,9em;
+    outline: none;
+    border: 1px solid bisque;
+    border-radius: 0,4em;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+}
+
+nav .search input {
+    min-width: 250;
+}
+
+nav .search button {
+    cursor: pointer;
+}
+
+#result {
+    color: black;
+    padding: 20px;
+}
+
+.info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 6fr, 4fr;
+    gap: 2Opx;
+    margin-top: 1.2em;
+}
+
+.poster {
+    border-radius: 36px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    margin: O.6em 0 0.9em 0;
+}
+.rating img {
+    width: 1.5em;
+}
+.rating h4 {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.details {
+    display: flex;
+    font-size: 0.9em;
+    justify-content: center;
+    color: antiquewhite;
+    margin: 0.6em;
+    font-weight: 300;
+}
+
+/* .genre {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+} */
+
+/* .genre div {
+    border: 1px solid wheat;
+    font-size: 0.75em;
+    padding: 0.4em 1.6em;
+    border-radius: 0.4em;
+    font-weight: 300;
+} */
