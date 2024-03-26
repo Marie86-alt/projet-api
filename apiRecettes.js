@@ -1,9 +1,32 @@
+function splitParagraphIntoSentences(paragraph) {
+  return paragraph.match(/[^\.!\?]+[\.!\?]+/g);
+}
+
+function displaySteps(sentences) {
+  let currentStep = 0;
+  document.getElementById("nextStepButton").style.display= "block"
+
+function displayNextStep() {
+          if (currentStep < sentences.length) {
+          document.getElementById('instruction').textContent +=  sentences[currentStep] ;
+          currentStep++;
+      } else {
+          document.getElementById('nextStepButton').style.display = 'none';
+          document.getElementById("instruction").textContent += `\n Bon appétit`
+
+      }
+  }
+  displayNextStep();
+  
+  document.getElementById('nextStepButton').addEventListener('click', displayNextStep);
+}
+
 document.getElementById("recipeButton").addEventListener("click",() =>{
    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
 .then(response => {
 return response.json()})
 .then(result =>{
-    console.log(result)
+    // console.log(result)
       let meal=result.meals[0]
       document.getElementsByClassName("repasTemplate")[0].style.display="none"
       document.getElementById("recipeName").innerHTML+=`Name of the dish: ${meal.strMeal}`
@@ -14,9 +37,11 @@ return response.json()})
         }
       }
       document.getElementById("image").innerHTML=`<img src="${meal.strMealThumb}" alt="Image of recipe mainly based on" ${meal.strIngredient1}/>`
-      document.getElementById("instruction").innerHTML=`Recipe: ${meal.strInstructions}`      
+      let instructions = meal.strInstructions
+      const sentences = splitParagraphIntoSentences(instructions);
+      displaySteps(sentences);
      })
-   })
+  })
 
     const countriesAdjective = [
       "Afghan",
