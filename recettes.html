@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="apiGenerale.css">
+    <script src="apiRecettes.js" defer></script>
+    <link rel="stylesheet" href="apiRecettes.css">
+</head>
+<body>
+    <div class="navbar">
+        <video id="myVideo" src="video/Black White Modern Monochrome Name Initial Logo.mp4" type="video/mp4" muted playsinline preload="auto" width="100px" height="100px" autoplay loop></video>
+        <div class="navbar-title">MHM Project</div>
+        <div class="dropdown">
+            <button class="dropButton" >Category</button>
+            <div class="dropdown-content">
+                <a href="api.html">Home</a>
+                <a href="quotes.html">Quotes</a>
+                <a href="films.html">Films</a>
+                <a href="#">Recipes</a>
+           </div>
+        </div>
+    </div>
+    <div>
+        <h1>A recipe a day keeps the doctor away</h1>
+    </div>
+
+    <div id="recipes">
+        <button id="recipeButton">Click to get a recipe</button>
+        <h2 id="recipeTitle"> Recipe of the day</h2>
+       <div class="repasTemplate" style="display: block;">
+        <p class="repasParagraph"> Step into a world where every meal is an adventure waiting to be savored. Our recipe collection is a tapestry of tastes, weaving together the vibrant flavors and rich traditions of cuisines from around the world.</p>
+        <div class="imageRepas"> <img src="img/repas2.avif" alt="repas"></div>
+        </div>
+       <div id="recipeName" ></div>
+       <div id="recipeType"></div>
+       <div id="recipeOrigin"></div>
+        <div id="image"></div>
+        <div id="instruction"></div>
+        <button id="nextStepButton" style="display: none;">Next Step</button>
+          </div>
+    <footer class="footer">
+        <a href="https://github.com/adatechschool/projet-collectif-dataviz-projet-api-mhm"><i class="fa fa-github"></i></a>
+        <p>&copy; 2024 MHM. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
