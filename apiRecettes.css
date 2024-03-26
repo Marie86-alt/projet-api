@@ -1,0 +1,30 @@
+#recipes img {
+    width: 450px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto ;
+    margin-right: auto;
+    border-radius: 25px;
+}
+#recipes .imageRepas img{
+    border-radius: 35px;
+    padding: 20px;
+    display: block;
+    margin: 65px auto;
+
+}
+
+#recipes #instruction{
+    padding: 30px;
+}
+
+#recipeButton{
+    margin-bottom:  68px ;
+}
+#recipeTitle{
+    margin-bottom: 40px;
+}
+.repasParagraph{
+    text-align: center;
+
+}

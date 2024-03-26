@@ -3,45 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/png">
+    <!-- <link rel="shortcut icon" href="img/logo.jpg" type="image/png"> -->
     <title>MHM Projet</title>
-    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="apiGenerale.css">
+    <link rel="stylesheet" href="apiFilms.css">
+    <link rel="stylesheet" href="apiCitations.css">
+    <link rel="stylesheet" href="apiRecettes.css">
+    <script src="apiGenerale.js" defer></script>
     <script src="apiRecettes.js" defer></script>
     <script src="apiFilms.js" defer></script>
     <script src="apiCitations.js" defer></script>
+      
 </head>
 <body>
 
-    <button id="buttonRandomQuote">Press Me</button>
+<div class="navbar">
+    <video id="myVideo" src="video/Black White Modern Monochrome Name Initial Logo.mp4" type="video/mp4" muted playsinline preload="auto" width="100px" height="100px" autoplay loop></video>
+    <div class="navbar-title">MHM Project</div>
+    <div class="dropdown">
+        <button class="dropButton" >Category</button>
+        <div class="dropdown-content">
+            <a href="#quotes">Quotes</a>
+            <a href="#films">Films</a>
+            <a href="#recipes">Recipes</a>
+        </div>
+    </div>
+</div>
+
+<div id="main-content">
     <div id="quotes">
-       
-        
+        <h2>Quotes</h2>
+        <div id="quote"></div>
+        <button id="buttonRandomQuote">Random Quote</button> 
     </div>
-<div>
+
     <div id="films">
-        
-            <nav>
-                <div class="search">
-                    <input type="text" id="movie-name" 
-                    placeholder="Entrez le nom du film"
-                    value="Black Panther">
-                    <button id="search-btn">Rechercher</button>
-    
-                </div>
-                <!-- <div class="logo">
-                <img src="img/logo cinema.jpg" alt="logo">
-            </div> -->
-            </nav>
-        
-    
+        <nav>
+            <div class="search">
+                <input type="text" id="movie-name" placeholder="Entrez le nom du film" value="Black Panther">
+                <button id="search-btn">Search</button>
+            </div>
+        </nav>
         <section id="result"></section>
+        <div id="word-cloud-title"></div>
+        <div id="word-cloud"></div>
     </div>
-    <div id="recettes">
-        <ul id="listSpecification"></ul>
+    
+
+    <div id="recipes">
+        <button id="recipeButton">Click to get a recipe</button>
+        <h2 id="recipeTitle"> Recipe of the day</h2>
+       <div class="repasTemplate" style="display: block;">
+        <p class="repasParagraph"> Step into a world where every meal is an adventure waiting to be savored. Our recipe collection is a tapestry of tastes, weaving together the vibrant flavors and rich traditions of cuisines from around the world.</p>
+        <div class="imageRepas"> <img src="img/repas.jpg" alt="repas"></div>
+        </div>
+       <div id="recipeName" ></div>
+       <div id="recipeType"></div>
+       <div id="recipeOrigin"></div>
         <div id="image"></div>
         <p id="instruction"></p>
     </div>
 </div>
     
+<footer class="footer">
+    <i class="fa fa-github" style="font-size: 48px; color:#fff;"></i>
+    <p>&copy; 2024 MHM. All rights reserved.</p>
+</footer>
 </body>
 </html>

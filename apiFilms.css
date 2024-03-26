@@ -6,17 +6,7 @@
  --bgColor: black;
  --textColor: white;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--alkatra);
-}
 
-body {
-    height: 100vh;
-    background-color: wheat;
-}
 
 /* style pour la nav*/
 
@@ -26,18 +16,23 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-nav .logo img {
+/* nav .logo img {
     width: 60px;
     height: 60px;
     object-fit: contain;
-}
+} */
 
 nav .search {
     display: flex;
     gap: 10px;
 }
 
-nav .input,
+#search-btn{
+        margin-inline-end: auto;
+        width: 180px;
+}
+
+/* nav .input,
 nav .button {
     padding: 5px 15px;
     font-size: 0,9em;
@@ -46,10 +41,40 @@ nav .button {
     border-radius: 0,4em;
     color: var(--textColor);
     background-color: var(--bgColor);
-}
+} */
 
 nav .search input {
-    min-width: 250;
+        width: 300px;
+        height:40px; 
+        border-radius: 10px;
+        margin-top:30.5px ;
+        background: #fff;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: black;
+        display: block;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        padding: 20px;
+        /*text-align: center; */
+        transition: all 200ms ease;
+        margin-inline-start: auto;
+             
+}
+
+#word-cloud{
+    background: -webkit-linear-gradient(#3c98c9, #be4d98);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    padding-right: 30px ;
+    
+}
+#word-cloud-title{
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 nav .search button {

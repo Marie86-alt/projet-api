@@ -1,28 +1,19 @@
-document.getElementById("buttonRandomQuote").addEventListener("click",()=>{
-    fetch("https://quote-garden.onrender.com/api/v3/quotes?limit=5")
-    .then(quote => { return quote.json()})
-    .then((responseQuotesInJson) => {
-
-    const quote =
-        responseQuotesInJson.data[Math.round(Math.random() * 4)];
-        
-      const quotes = responseQuotesInJson.data;
-    //   for (let quote of quotes){
-    //     const div = document.createElement("div");
-    //     div.classList.add("quote");
-    //     div.innerHTML = quote.quoteText;
-    //     document.getElementById("quotes").appendChild(div);
-    //   }
-      quotes.forEach((quote) => {
-        const div = document.createElement("div");
-        div.classList.add("quote");
-        div.innerHTML = quote.quoteText;
-        document.getElementById("quotes").appendChild(div);
-       
-      });
-    });
-})
-
-
-// let text = responseQuotesInJson.data[0].quoteText;
-// let author = responseQuotesInJson.data[0].quoteAuthor;
+fetch("https://quote-garden.onrender.com/api/v3/quotes?limit=20")
+        .then((serverResponse) => {
+          return serverResponse.json();
+        })
+        .then((serverResponseInJSON) => {
+          quotesArray = serverResponseInJSON.data;
+          //Display a random quote on the page
+          showRandomQuote();
+        });
+      let quotesArray = [];
+      function showRandomQuote() {
+        let index = Math.floor(Math.random() * quotesArray.length);
+        let randomQuote = quotesArray[index].quoteText;
+        let randomAuthor = quotesArray[index].quoteAuthor;
+        document.querySelector("#quote").innerHTML =`${randomQuote} </br> By: \n${randomAuthor}`;
+      }
+      document.getElementById("buttonRandomQuote").addEventListener("click", () => {
+          showRandomQuote();
+        });
