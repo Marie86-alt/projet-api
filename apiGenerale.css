@@ -146,6 +146,15 @@ body {
 .footer p {
     font-size: 14px;
     color: #FFFFFF;
+}
 
+.footer a i {
+   
+    color: #fff;
+    font-size: 48px;
   }
-
+  
+.footer a:hover i {
+  
+    color: #d80c579d !important;
+  }
