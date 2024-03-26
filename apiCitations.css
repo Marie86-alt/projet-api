@@ -1,13 +1,44 @@
-#quote {
-    color: #b72b5e;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    margin-top: 30px;
-    text-align: center;
+@keyframes cursor {
+  /* From 50% of the set time for the animation, it will turn pink */
+  50% {
+    border-color: #b72b5e;
   }
-  
-  #quote:hover {
-    opacity: 0.7;
+}
+
+@keyframes typing {
+  /* "from" = 0 % of the animation time 
+  "to" = 100 % of the time*/
+  from {
+    width: 0;
+    /* wrap = goes to the next line 
+    nowrap = keeps on writing on the same line
+    */
+    text-wrap: nowrap;
   }
- 
+  to {
+    text-wrap: nowrap;
+  }
+}
+
+.container {
+  display: block;
+}
+
+/* #quote, */
+#typewriterEffect {
+  border-right: 1px solid transparent;
+  color: #b72b5e;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  animation: typing 3s steps(50), cursor 1s step-end 5;
+  text-wrap: wrap;
+}
+
+#quote:hover {
+  opacity: 0.7;
+}
