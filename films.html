@@ -6,12 +6,14 @@
     <title>Movies</title>
     <link rel="stylesheet" href="apiGenerale.css">
     <link rel="stylesheet" href="apiFilms.css">
-    <script src="apiFilms.js" defer></script>
+    <script src="apiFilmsDataVis" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div id =filmsPage>
     <div class="navbar">
         <video id="myVideo" src="video/Black White Modern Monochrome Name Initial Logo.mp4" type="video/mp4" muted playsinline preload="auto" width="100px" height="100px" autoplay loop></video>
-        <div class="navbar-title">MHM Project</div>
+        <div class="navbar-title">Infinite Inspirations</div>
         <div class="dropdown">
             <button class="dropButton" >Category</button>
             <div class="dropdown-content">
@@ -22,21 +24,28 @@
             </div>
         </div>
     </div>
-        <div>
-            <h1>A movie a day keeps the doctor away</h1>
-        </div>
-        <div id="films">
-            <nav>
+    <div id="main-content"> 
+                <h1 id="titleFilms">A movie a day keeps the doctor away</h1>  
+        <div id="filmsSection">
+            <!-- <nav>
                 <div class="search">
-                    <input type="text" id="movie-name" placeholder="Entrez le nom du film" value="Black Panther">
-                    <button id="search-btn">Search</button>
+                    <input type="text" id="movie-name2" placeholder="Entrez le nom du film" value="Black Panther">
+                    <button id="search-btn2">Search</button>
                 </div>
-            </nav>
-            <section id="result"></section>
-            <div id="word-cloud-title"></div>
-            <div id="word-cloud"></div>
+            </nav> -->
+            <section id="result2"></section>
+           
         </div>
-    
+    </div>
+    <div id="filmsDataviz">
+        <div id="word-cloud-title"></div>
+        <div id="word-cloud"></div>
+        <div style="width: 80%; margin: 0 auto;">
+            <canvas id="boxOfficeChart"></canvas>
+        </div>
+
+    </div>
+    </div>
     <footer class="footer">
         <a href="https://github.com/adatechschool/projet-collectif-dataviz-projet-api-mhm"><i class="fa fa-github"></i></a>
         <p>&copy; 2024 MHM. All rights reserved.</p>

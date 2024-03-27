@@ -6,3 +6,10 @@
 //     video.play();
 // });
 
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById('main-content').classList.toggle("dark-mode");
+
+});

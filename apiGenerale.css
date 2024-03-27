@@ -6,11 +6,35 @@
     font-family: var(--alkatra);
 }
 
+.container #darkModeToggle{
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    background-color: #fff;
+    color: #000000;
+    padding: 2px 2px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    /* z-index: 1000;  */
+    /* width: 40px;
+    height: 20px; */
+}
+
 
 body {
     height: 100vh;
     background-color: rgba(205, 229, 246, 0.935);
 } 
+body.light-mode , #main-content.light-mode{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode , #main-content.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
 .navbar  {
     display: flex;
     align-items: center;
