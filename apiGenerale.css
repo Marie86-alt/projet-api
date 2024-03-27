@@ -35,6 +35,51 @@ body.dark-mode , #main-content.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
 }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width: 600px; 
+   
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-image {
+    max-width: 100%;
+    height: auto;
+      
+}
+
 .navbar  {
     display: flex;
     align-items: center;
@@ -78,8 +123,6 @@ body.dark-mode , #main-content.dark-mode {
 }
 
 /* buttons */
-
-
 #buttonRandomQuote, #recipeButton, .dropButton , #search-btn, #nextStepButton{
     background: #c94172;
     border: 1px solid #fff;

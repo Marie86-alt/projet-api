@@ -63,14 +63,7 @@ let getMovie = () =>{
     })
 }}
 
-
-// const darkModeToggle = document.getElementById("darkModeToggle");
-
-// darkModeToggle.addEventListener("click", () => {
-//     document.body.classList.toggle("dark-mode");
-// });
-
-   const wordCloudContainer = document.getElementById("word-cloud");
+  const wordCloudContainer = document.getElementById("word-cloud");
    const genres = [];
    const genreCounts = {};
    
@@ -115,39 +108,43 @@ let getMovie = () =>{
    
    countGenres(movies);
    generateWordCloudHTML();
-//    // Récupérer les données de votre API et les stocker dans un tableau
-// const boxOfficeData = [
-//     { Title: "Film 1", boxOffice: 5000000 },
-//     { Title: "Film 2", boxOffice: 8000000 },
-//     { Title: "Film 3", boxOffice: 3000000 },
+
+searchBtn.addEventListener("click", getMovie) 
+window.addEventListener("load", getMovie) 
+
+   // Récupérer les données de votre API et les stocker dans un tableau
+const boxOfficeData = [
+    { Title: "Film 1", boxOffice: 5000000 },
+    { Title: "Film 2", boxOffice: 8000000 },
+    { Title: "Film 3", boxOffice: 3000000 },
     
-// ];
+];
 
-// // Extraire les noms des films et les recettes de box-office pour créer les étiquettes et les données du graphique
-// const labels = boxOfficeData.map(entry => entry.Title);
-// const data = boxOfficeData.map(entry => entry.boxOffice);
+// Extraire les noms des films et les recettes de box-office pour créer les étiquettes et les données du graphique
+const labels = boxOfficeData.map(entry => entry.Title);
+const data = boxOfficeData.map(entry => entry.boxOffice);
 
-// // Créer le graphique à barres avec Chart.js
-// const ctx = document.getElementById('boxOfficeChart').getContext('2d');
-// const boxOfficeChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels: labels,
-//         datasets: [{
-//             label: 'Box Office',
-//             data: data,
-//             backgroundColor: 'rgba(255, 99, 132, 0.2)', // Couleur de fond des barres
-//             borderColor: 'rgba(255, 99, 132, 1)', // Couleur des bordures des barres
-//             borderWidth: 1
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             y: {
-//                 beginAtZero: true // Axe Y commence à 0
-//             }
-//         }
-//     }
-// });
+// Créer le graphique à barres avec Chart.js
+const ctx = document.getElementById('boxOfficeChart').getContext('2d');
+const boxOfficeChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Box Office',
+            data: data,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)', // Couleur de fond des barres
+            borderColor: 'rgba(255, 99, 132, 1)', // Couleur des bordures des barres
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true // Axe Y commence à 0
+            }
+        }
+    }
+});
 searchBtn.addEventListener("click", getMovie) 
 window.addEventListener("load", getMovie) 

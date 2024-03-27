@@ -20,8 +20,13 @@
     <button id="darkModeToggle">Dark Mode</button>
 </div>
 <body>
-   
-
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img src="img/Cute Collage Pancake Instagram Story.png" alt="Popup Image" class="popup-image">
+            <button id="okButton">OK</button>
+        </div>
+    </div>
 <div class="navbar">
     <video id="myVideo" src="video/Black White Modern Monochrome Name Initial Logo.mp4" type="video/mp4" muted playsinline preload="auto" width="100px" height="100px" autoplay loop></video>
     <div class="navbar-title">Infinite Inspirations</div>
@@ -52,8 +57,8 @@
             </div>
         </nav>
         <section id="result"></section>
-        <div id="word-cloud-title"></div>
-        <div id="word-cloud"></div>
+        <div id="word-cloud-title" style="display:none;"></div>
+        <div id="word-cloud" style="display:none;"></div>
     </div>
     
 
