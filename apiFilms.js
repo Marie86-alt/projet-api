@@ -113,12 +113,20 @@ searchBtn.addEventListener("click", getMovie)
 window.addEventListener("load", getMovie) 
 
    // Récupérer les données de votre API et les stocker dans un tableau
-const boxOfficeData = [
-    { Title: "Film 1", boxOffice: 5000000 },
-    { Title: "Film 2", boxOffice: 8000000 },
-    { Title: "Film 3", boxOffice: 3000000 },
+   const boxOfficeData = [
+    { Title: "Avatar", boxOffice: 785221649 },
+    { Title: "Avengers: Endgame", boxOffice: 858373000 },
+    { Title: "Aquaman", boxOffice: 335104314 },
+    { Title: "woman king", boxOffice: 67328130 },
+    { Title: "dune", boxOffice: 1671713208 },
+    { Title: "The Lion King (2019)", boxOffice: 422783777 },
+    { Title: "The Avengers", boxOffice: 623357910 },
+    { Title: "Furious 7", boxOffice: 353007020 },
+    { Title: "top gun", boxOffice: 180258178 },
+    { Title: "Black Panther", boxOffice: 700426566 },
     
 ];
+
 
 // Extraire les noms des films et les recettes de box-office pour créer les étiquettes et les données du graphique
 const labels = boxOfficeData.map(entry => entry.Title);
